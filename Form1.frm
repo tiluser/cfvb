@@ -5,7 +5,6 @@ Begin VB.Form CreoleForthForm
    ClientLeft      =   120
    ClientTop       =   465
    ClientWidth     =   6465
-   DrawMode        =   0  'Blackness
    LinkTopic       =   "Form1"
    Picture         =   "Form1.frx":0000
    ScaleHeight     =   6315

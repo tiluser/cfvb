@@ -43,13 +43,20 @@ End Sub
 
 Sub Pop(ByVal pStack As ArrayList)
     Dim lngEndIndex As Long
+    If pStack.Count = 0 Then
+        MsgBox "Stack underflow"
+        Call CleanFields
+        GoTo done
+    End If
     lngEndIndex = pStack.Count() - 1
+
     If IsObject(pStack.Items(lngEndIndex)) Then
         Set Scratch = pStack.Items(lngEndIndex)
     Else
         Scratch = pStack.Items(lngEndIndex)
     End If
     Call pStack.Remove(lngEndIndex)
+done:
 End Sub
 
 Sub Unshift(ByVal pStack As ArrayList)
@@ -178,26 +185,26 @@ Public Property Get LoopLabelPtr() As Long
     LoopLabelPtr = lngLoopLabelPtr
 End Property
 
-Public Property Get LoopLabels(index As Long) As String
+Public Property Get LoopLabels(Index As Long) As String
     saLoopLabels(0) = "I"
     saLoopLabels(1) = "J"
     saLoopLabels(2) = "K"
-    LoopLabels = saLoopLabels(index)
+    LoopLabels = saLoopLabels(Index)
 End Property
 
-Public Property Get LoopCurrIndexes(index As Long) As Long
-    LoopCurrIndexes = laLoopCurrIndexes(index)
+Public Property Get LoopCurrIndexes(Index As Long) As Long
+    LoopCurrIndexes = laLoopCurrIndexes(Index)
 End Property
 
-Public Property Let LoopCurrIndexes(index As Long, Value As Long)
-    laLoopCurrIndexes(index) = Value
+Public Property Let LoopCurrIndexes(Index As Long, Value As Long)
+    laLoopCurrIndexes(Index) = Value
 End Property
 
-Public Property Get Vec(index As Long) As Double
-    Vec = v(index)
+Public Property Get Vec(Index As Long) As Double
+    Vec = v(Index)
 End Property
-Public Property Let Vec(index As Long, MyValue As Double)
-    v(index) = MyValue
+Public Property Let Vec(Index As Long, MyValue As Double)
+    v(Index) = MyValue
 End Property
 
 Public Property Let PADAreaPtr(Value As Long)

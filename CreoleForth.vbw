@@ -1,5 +1,5 @@
-CreoleForthForm = 14, 38, 538, 504, Z, 26, 26, 820, 492, C
-GlobalSimpleProps = 268, 62, 913, 528, 
+CreoleForthForm = 14, 38, 538, 504, , 26, 26, 820, 492, C
+GlobalSimpleProps = 268, 62, 913, 528, Z
 CorePrims = 78, 78, 723, 544, 
 ArrayList = 104, 104, 749, 570, 
 Interpreter = 130, 130, 654, 574, 
