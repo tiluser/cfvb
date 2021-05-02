@@ -1,0 +1,13 @@
+CreoleForthForm = 14, 38, 538, 504, Z, 26, 26, 820, 492, C
+GlobalSimpleProps = 268, 62, 913, 528, 
+CorePrims = 78, 78, 723, 544, 
+ArrayList = 104, 104, 749, 570, 
+Interpreter = 130, 130, 654, 574, 
+CreoleForthBundle = 208, 208, 592, 690, 
+CreoleWord = 0, 0, 538, 482, 
+LogicOps = 130, 130, 591, 492, 
+AppSpec = 78, 78, 539, 440, 
+ReturnLoc = 0, 0, 0, 0, C
+Compiler = 182, 182, 609, 664, 
+CompileInfo = 104, 104, 565, 466, 
+LoopInfo = 156, 156, 617, 518, 
