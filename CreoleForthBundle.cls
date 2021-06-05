@@ -74,6 +74,7 @@ End Property
 
 Sub InitProps()
     Call cfbDict.RemoveAll
+    Call cfbAddress.Clear
     Call cfbGsp.VocabStack.Clear
     Call cfbGsp.VocabStack.Add("ONLY")
     Call cfbGsp.VocabStack.Add("FORTH")
