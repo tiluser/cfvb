@@ -1,10 +1,3 @@
-' Creole Forth for VB
-' Version 0.01
-' Copyright 2021 Joseph M. O'Connor
-' This Source Code Form is subject to the terms of the Mozilla Public
-' License, v. 2.0. If a copy of the MPL was not distributed with this
-' file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
 Dim gspDataStack As New ArrayList
 Dim gspReturnStack As New ArrayList
 Dim gspVocabStack As New ArrayList
@@ -29,6 +22,8 @@ Dim lngPADAreaPtr As Long
 Dim laLoopCurrIndexes(3) As Long
 Dim sHelpCommentField As String
 
+Private v() As Double
+
 Sub Push(ByVal pStack As ArrayList)
     Call pStack.Add(Scratch)
 End Sub
@@ -38,7 +33,7 @@ Sub Pop(ByVal pStack As ArrayList)
     If pStack.Count = 0 Then
         MsgBox "Stack underflow"
         Call CleanFields
-        GoTo Done
+        GoTo done
     End If
     lngEndIndex = pStack.Count() - 1
 
@@ -48,7 +43,7 @@ Sub Pop(ByVal pStack As ArrayList)
         Scratch = pStack.Items(lngEndIndex)
     End If
     Call pStack.Remove(lngEndIndex)
-Done:
+done:
 End Sub
 
 Sub Unshift(ByVal pStack As ArrayList)
